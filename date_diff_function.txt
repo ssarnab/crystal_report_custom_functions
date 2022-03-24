@@ -1,0 +1,4 @@
+Function (datetimevar start,datetimevar end)
+(
+Numbervar days := DateDiff("d", start,end);
+);

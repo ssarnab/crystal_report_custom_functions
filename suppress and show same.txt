@@ -1,0 +1,10 @@
+Global datetimevar Months;
+stringvar Show;
+if(Months={FabricStatusGMSir.MONTH}) then
+Show:='"'
+else
+Show:=totext({FabricStatusGMSir.MONTH},"MMM-yy");
+
+Months:={FabricStatusGMSir.MONTH};
+
+Show;
