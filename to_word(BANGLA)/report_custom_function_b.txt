@@ -1,0 +1,40 @@
+Function (numberVar Y)
+
+numberVar X;
+numberVar Decimal;
+numberVar hundrad;
+numberVar Thousand;
+numberVar Luck;
+numberVar Cror;
+numberVar Poisa;
+numberVar FractionPart;
+
+stringVar ForHundrad; 
+stringVar ForThousand;
+stringVar ForLuck;
+stringVar ForCror;
+stringVar ForPoisa;
+
+
+FractionPart:=Y-Int(Y);
+X:=Y-FractionPart;
+Decimal:=int((X mod 100)/1);
+hundrad:=int((X mod 1000)/100);
+Thousand:=int((X mod 100000)/1000);
+Luck:=int((X mod 10000000)/100000);
+Cror:=int((X mod 1000000000)/10000000);
+Poisa:=int((Y-int(Y))*100);
+
+ForHundrad:=(If hundrad>0 Then "kZ " Else "");
+ForThousand:=(If Thousand>0 Then " nvRvi " Else "");
+ForLuck:=(If Luck>0 Then "j¶ " Else "");
+ForCror:=(If cror>0 Then "‡KvwU " Else "");
+ForPoisa:=(If Poisa>0 Then " cqmv" Else "");
+
+If(X=0) THEN
+"k~b¨ UvKv "
+Else If (X>0) THEN
+a (Cror)+ ForCror+a(Luck)+ ForLuck + a(Thousand) + ForThousand +
+a(Hundrad)+ ForHundrad+ a(Decimal)+" UvKv "+
+a(Poisa)+ ForPoisa+ "gvÎ" 
+Else "Parhaps Wrong Output !!!!"
